@@ -48,7 +48,7 @@ all: link
 preprocess: $(PREPROCS)| $(preprocessordir)
 	@powershell -Command "Write-Host 'Preprocessing complete.' -ForegroundColor Cyan"
 
-	$(preprocessordir)/%.i: $(srcdir)/%.cpp | $(preprocessordir)
+$(preprocessordir)/%.i: $(srcdir)/%.cpp | $(preprocessordir)
 	@powershell -Command "Write-Host 'Preprocessing $<' -ForegroundColor Magenta"
 	$(CC) $(CFLAGS) -E $< -o $@
 
@@ -100,5 +100,5 @@ $(mapdir):
 
 clean: ## Remove all build artifacts
 	@powershell -Command "Write-Host 'Cleaning build artifacts...' -ForegroundColor Yellow"
-	@powershell -Command "if (Test-Path '$(builddir)') { Remove-Item -Recurse -Force '$(builddir)' }"
+	@powershell -Command "try { if (Test-Path '$(builddir)') { Remove-Item -Recurse -Force '$(builddir)' -ErrorAction Stop } } catch { Write-Host 'Warning: Could not remove some files (may be in use)' -ForegroundColor Yellow }"
 	@powershell -Command "Write-Host 'Clean complete.' -ForegroundColor Green"
