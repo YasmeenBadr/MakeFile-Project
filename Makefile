@@ -20,6 +20,7 @@ endef
 define COLOR_RESET
 @powershell -Command "Write-Host '$(1)' -ForegroundColor White"
 endef
+#Variables to store list of files
 PREPROCS = $(patsubst $(srcdir)/%.cpp,$(preprocessordir)/%.i,$(SRCS))
 ASMS = $(patsubst $(srcdir)/%.cpp,$(assemblerdir)/%.s,$(SRCS))
 OBJS = $(patsubst $(srcdir)/%.cpp,$(objdir)/%.o,$(SRCS))
@@ -27,18 +28,7 @@ DWARFS = $(patsubst $(srcdir)/%.cpp,$(dwarfdir)/%.dwarf,$(SRCS))
 MAPFILE =$(mapdir)/$(notdir $(TARGET)).map
 
 help: ## Show this help message
-	@powershell -Command "Write-Host 'Available targets:' -ForegroundColor Cyan"
-	@powershell -Command "Write-Host '  build      - Create all build directories' -ForegroundColor Green"
-	@powershell -Command "Write-Host '  all        - Build the complete project (default)' -ForegroundColor Green"
-	@powershell -Command "Write-Host '  preprocess - Generate preprocessed .i files' -ForegroundColor Green"
-	@powershell -Command "Write-Host '  assemble   - Generate assembly .s files' -ForegroundColor Green"
-	@powershell -Command "Write-Host '  dwarf      - Generate dwarf debug files' -ForegroundColor Green"
-	@powershell -Command "Write-Host '  link       - Link object files into executable' -ForegroundColor Green"
-	@powershell -Command "Write-Host '  bin        - Create raw binary file from executable' -ForegroundColor Green"
-	@powershell -Command "Write-Host '  debug      - Switch to debug build mode' -ForegroundColor Yellow"
-	@powershell -Command "Write-Host '  release    - Switch to release build mode' -ForegroundColor Yellow"
-	@powershell -Command "Write-Host '  clean      - Remove all build artifacts' -ForegroundColor Yellow"
-	@powershell -Command "Write-Host '  help       - Show this help message' -ForegroundColor Green"
+	@powershell -Command "Write-Host 'Available targets:' -ForegroundColor Cyan; Write-Host '  build      - Create all build directories' -ForegroundColor Green; Write-Host '  all        - Build the complete project (default)' -ForegroundColor Green; Write-Host '  preprocess - Generate preprocessed .i files' -ForegroundColor Green; Write-Host '  assemble   - Generate assembly .s files' -ForegroundColor Green; Write-Host '  dwarf      - Generate dwarf debug files' -ForegroundColor Green; Write-Host '  link       - Link object files into executable' -ForegroundColor Green; Write-Host '  bin        - Create raw binary file from executable' -ForegroundColor Green; Write-Host '  debug      - Switch to debug build mode' -ForegroundColor Yellow; Write-Host '  release    - Switch to release build mode' -ForegroundColor Yellow; Write-Host '  clean      - Remove all build artifacts' -ForegroundColor Yellow; Write-Host '  help       - Show this help message' -ForegroundColor Green"
 
 debug: ## Switch to debug build mode
 	@powershell -Command "Write-Host 'Building in DEBUG mode...' -ForegroundColor Yellow"
