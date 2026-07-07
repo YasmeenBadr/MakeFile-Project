@@ -1,7 +1,22 @@
 TARGET = $(bindir)/my_program
 CC = g++
 OBJCOPY = objcopy
-CFLAGS = -Wall -Wextra -g3 -gdwarf-4 -I$(incdir)
+BUILD_MODE ?= debug
+
+# Debug flags
+DEBUG_CFLAGS = -Wall -Wextra -g3 -gdwarf-4 -I$(incdir) -O0 -DDEBUG
+
+# Release flags
+RELEASE_CFLAGS = -Wall -Wextra -I$(incdir) -O3 -DNDEBUG
+
+# Select flags based on BUILD_MODE
+ifeq ($(BUILD_MODE),debug)
+CFLAGS = $(DEBUG_CFLAGS)
+else ifeq ($(BUILD_MODE),release)
+CFLAGS = $(RELEASE_CFLAGS)
+else
+$(error Invalid BUILD_MODE: $(BUILD_MODE). Use 'debug' or 'release')
+endif
 #-WALL Enables the most commonly useful compiler warnings.
 #-WEXTRA Enables some extra warning flags that are not enabled by -Wall.
 #-g3 Generates debug information for use by GDB.

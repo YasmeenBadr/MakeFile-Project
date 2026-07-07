@@ -1,5 +1,5 @@
 include config.mk
-.PHONY: help build all preprocess assemble dwarf link bin clean
+.PHONY: help build all preprocess assemble dwarf link bin clean debug release
 
 # Color functions for Windows PowerShell
 define COLOR_GREEN
@@ -35,14 +35,24 @@ help: ## Show this help message
 	@powershell -Command "Write-Host '  dwarf      - Generate dwarf debug files' -ForegroundColor Green"
 	@powershell -Command "Write-Host '  link       - Link object files into executable' -ForegroundColor Green"
 	@powershell -Command "Write-Host '  bin        - Create raw binary file from executable' -ForegroundColor Green"
+	@powershell -Command "Write-Host '  debug      - Switch to debug build mode' -ForegroundColor Yellow"
+	@powershell -Command "Write-Host '  release    - Switch to release build mode' -ForegroundColor Yellow"
 	@powershell -Command "Write-Host '  clean      - Remove all build artifacts' -ForegroundColor Yellow"
 	@powershell -Command "Write-Host '  help       - Show this help message' -ForegroundColor Green"
+
+debug: ## Switch to debug build mode
+	@powershell -Command "Write-Host 'Building in DEBUG mode...' -ForegroundColor Yellow"
+	@$(MAKE) BUILD_MODE=debug all
+
+release: ## Switch to release build mode
+	@powershell -Command "Write-Host 'Building in RELEASE mode...' -ForegroundColor Yellow"
+	@$(MAKE) BUILD_MODE=release all
 build:
 	@powershell -Command "Write-Host 'Creating build directories...' -ForegroundColor Blue"
 	@mkdir -p $(builddir) $(preprocessordir) $(assemblerdir) $(objdir) $(bindir) $(dwarfdir) $(mapdir)
 	@powershell -Command "Write-Host 'Build directories created.' -ForegroundColor Green"
 
-all:$(TARGET)
+all: link
 	@powershell -Command "Write-Host 'Build complete: $(TARGET)' -ForegroundColor Green"
 
 preprocess: $(PREPROCS)| $(preprocessordir)
@@ -66,7 +76,11 @@ $(dwarfdir)/%.dwarf: $(srcdir)/%.cpp | $(dwarfdir)
 	@powershell -Command "Write-Host 'Generating dwarf $<' -ForegroundColor Magenta"
 	$(CC) $(CFLAGS) -g -c $< -o $@
 
-link: $(OBJS) | $(objdir) $(mapdir)
+$(objdir)/%.o: $(srcdir)/%.cpp | $(objdir)
+	@powershell -Command "Write-Host 'Compiling $<' -ForegroundColor Magenta"
+	$(CC) $(CFLAGS) -c $< -o $@
+
+link: $(OBJS) | $(objdir) $(mapdir) $(bindir)
 	@powershell -Command "Write-Host 'Linking objects...' -ForegroundColor Cyan"
 	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET) -Wl,-Map=$(MAPFILE)
 	@powershell -Command "Write-Host 'Linking complete: $(TARGET)' -ForegroundColor Green"
@@ -96,5 +110,5 @@ $(mapdir):
 
 clean: ## Remove all build artifacts
 	@powershell -Command "Write-Host 'Cleaning build artifacts...' -ForegroundColor Yellow"
-	@rm -rf $(builddir)
+	@powershell -Command "if (Test-Path '$(builddir)') { Remove-Item -Recurse -Force '$(builddir)' }"
 	@powershell -Command "Write-Host 'Clean complete.' -ForegroundColor Green"

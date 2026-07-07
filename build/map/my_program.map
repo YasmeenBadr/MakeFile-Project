@@ -256,7 +256,7 @@ LOAD C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/
 LOAD C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmsvcrt.a
 LOAD C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libkernel32.a
 LOAD C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtend.o
-                0x0000000000000430                . = SIZEOF_HEADERS
+                0x0000000000000458                . = SIZEOF_HEADERS
                 0x0000000000001000                . = ALIGN (__section_alignment__)
 
 .text           0x0000000140001000     0x1a00
@@ -607,183 +607,181 @@ sivision        0x0000000140004000      0x200
 
 .rdata          0x0000000140005000      0x800
  *(.rdata)
- .rdata         0x0000000140005000       0x10 build/o/test.o
- *fill*         0x0000000140005010       0x10 
- .rdata         0x0000000140005020       0x60 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
-                0x0000000140005020                __dyn_tls_init_callback
-                0x0000000140005040                _tls_used
- .rdata         0x0000000140005080      0x140 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-merr.o)
- .rdata         0x00000001400051c0      0x160 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-pseudo-reloc.o)
- .rdata         0x0000000140005320       0x30 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt_handler.o)
- .rdata         0x0000000140005350       0x20 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrtbase_compat.o)
- .rdata         0x0000000140005370        0x8 my_program_exe_ertr000001.o
+ .rdata         0x0000000140005000       0x60 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+                0x0000000140005000                __dyn_tls_init_callback
+                0x0000000140005020                _tls_used
+ .rdata         0x0000000140005060      0x140 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-merr.o)
+ .rdata         0x00000001400051a0      0x160 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-pseudo-reloc.o)
+ .rdata         0x0000000140005300       0x30 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-crt_handler.o)
+ .rdata         0x0000000140005330       0x20 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrtbase_compat.o)
+ .rdata         0x0000000140005350        0x8 my_program_exe_ertr000001.o
  *(SORT_BY_NAME(.rdata$*))
- *fill*         0x0000000140005378        0x8 
+ *fill*         0x0000000140005358        0x8 
  .rdata$.refptr._CRT_MT
-                0x0000000140005380       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
-                0x0000000140005380                .refptr._CRT_MT
+                0x0000000140005360       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+                0x0000000140005360                .refptr._CRT_MT
  .rdata$.refptr._MINGW_INSTALL_DEBUG_MATHERR
-                0x0000000140005390       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005390                .refptr._MINGW_INSTALL_DEBUG_MATHERR
+                0x0000000140005370       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005370                .refptr._MINGW_INSTALL_DEBUG_MATHERR
  .rdata$.refptr._ZSt4cout
-                0x00000001400053a0       0x10 build/o/test.o
-                0x00000001400053a0                __fu0__ZSt4cout
-                0x00000001400053a0                .refptr._ZSt4cout
+                0x0000000140005380       0x10 build/o/test.o
+                0x0000000140005380                __fu0__ZSt4cout
+                0x0000000140005380                .refptr._ZSt4cout
  .rdata$.refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
-                0x00000001400053b0       0x10 build/o/test.o
-                0x00000001400053b0                .refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+                0x0000000140005390       0x10 build/o/test.o
+                0x0000000140005390                .refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
  .rdata$.refptr.__CTOR_LIST__
-                0x00000001400053c0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
-                0x00000001400053c0                .refptr.__CTOR_LIST__
+                0x00000001400053a0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-gccmain.o)
+                0x00000001400053a0                .refptr.__CTOR_LIST__
  .rdata$.refptr.__ImageBase
-                0x00000001400053d0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x00000001400053d0                .refptr.__ImageBase
+                0x00000001400053b0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400053b0                .refptr.__ImageBase
  .rdata$.refptr.__RUNTIME_PSEUDO_RELOC_LIST_END__
-                0x00000001400053e0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-pseudo-reloc.o)
-                0x00000001400053e0                .refptr.__RUNTIME_PSEUDO_RELOC_LIST_END__
+                0x00000001400053c0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-pseudo-reloc.o)
+                0x00000001400053c0                .refptr.__RUNTIME_PSEUDO_RELOC_LIST_END__
  .rdata$.refptr.__RUNTIME_PSEUDO_RELOC_LIST__
-                0x00000001400053f0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-pseudo-reloc.o)
-                0x00000001400053f0                .refptr.__RUNTIME_PSEUDO_RELOC_LIST__
+                0x00000001400053d0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-pseudo-reloc.o)
+                0x00000001400053d0                .refptr.__RUNTIME_PSEUDO_RELOC_LIST__
  .rdata$.refptr.__dyn_tls_init_callback
-                0x0000000140005400       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005400                .refptr.__dyn_tls_init_callback
+                0x00000001400053e0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400053e0                .refptr.__dyn_tls_init_callback
  .rdata$.refptr.__imp___initenv
-                0x0000000140005410       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005410                .refptr.__imp___initenv
+                0x00000001400053f0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400053f0                .refptr.__imp___initenv
  .rdata$.refptr.__imp__exit
-                0x0000000140005420       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-exit_wrappers.o)
-                0x0000000140005420                .refptr.__imp__exit
+                0x0000000140005400       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-exit_wrappers.o)
+                0x0000000140005400                .refptr.__imp__exit
  .rdata$.refptr.__imp__tzset
-                0x0000000140005430       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrtbase_compat.o)
-                0x0000000140005430                .refptr.__imp__tzset
+                0x0000000140005410       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrtbase_compat.o)
+                0x0000000140005410                .refptr.__imp__tzset
  .rdata$.refptr.__imp_exit
-                0x0000000140005440       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-exit_wrappers.o)
-                0x0000000140005440                .refptr.__imp_exit
+                0x0000000140005420       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-exit_wrappers.o)
+                0x0000000140005420                .refptr.__imp_exit
  .rdata$.refptr.__mingw_app_type
-                0x0000000140005450       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005450                .refptr.__mingw_app_type
+                0x0000000140005430       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005430                .refptr.__mingw_app_type
  .rdata$.refptr.__mingw_initltsdrot_force
-                0x0000000140005460       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005460                .refptr.__mingw_initltsdrot_force
+                0x0000000140005440       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005440                .refptr.__mingw_initltsdrot_force
  .rdata$.refptr.__mingw_initltsdyn_force
-                0x0000000140005470       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005470                .refptr.__mingw_initltsdyn_force
+                0x0000000140005450       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005450                .refptr.__mingw_initltsdyn_force
  .rdata$.refptr.__mingw_initltssuo_force
-                0x0000000140005480       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005480                .refptr.__mingw_initltssuo_force
+                0x0000000140005460       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005460                .refptr.__mingw_initltssuo_force
  .rdata$.refptr.__mingw_module_is_dll
-                0x0000000140005490       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrtbase_compat.o)
-                0x0000000140005490                .refptr.__mingw_module_is_dll
+                0x0000000140005470       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmsvcrt.a(lib64_libucrt_extra_a-ucrtbase_compat.o)
+                0x0000000140005470                .refptr.__mingw_module_is_dll
  .rdata$.refptr.__mingw_oldexcpt_handler
-                0x00000001400054a0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x00000001400054a0                .refptr.__mingw_oldexcpt_handler
+                0x0000000140005480       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005480                .refptr.__mingw_oldexcpt_handler
  .rdata$.refptr.__native_startup_lock
-                0x00000001400054b0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x00000001400054b0                .refptr.__native_startup_lock
+                0x0000000140005490       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005490                .refptr.__native_startup_lock
  .rdata$.refptr.__native_startup_state
-                0x00000001400054c0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x00000001400054c0                .refptr.__native_startup_state
+                0x00000001400054a0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400054a0                .refptr.__native_startup_state
  .rdata$.refptr.__xc_a
-                0x00000001400054d0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x00000001400054d0                .refptr.__xc_a
+                0x00000001400054b0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400054b0                .refptr.__xc_a
  .rdata$.refptr.__xc_z
-                0x00000001400054e0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x00000001400054e0                .refptr.__xc_z
+                0x00000001400054c0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400054c0                .refptr.__xc_z
  .rdata$.refptr.__xi_a
-                0x00000001400054f0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x00000001400054f0                .refptr.__xi_a
+                0x00000001400054d0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400054d0                .refptr.__xi_a
  .rdata$.refptr.__xi_z
-                0x0000000140005500       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005500                .refptr.__xi_z
+                0x00000001400054e0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400054e0                .refptr.__xi_z
  .rdata$.refptr._commode
-                0x0000000140005510       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005510                .refptr._commode
+                0x00000001400054f0       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x00000001400054f0                .refptr._commode
  .rdata$.refptr._dowildcard
-                0x0000000140005520       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005520                .refptr._dowildcard
+                0x0000000140005500       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005500                .refptr._dowildcard
  .rdata$.refptr._fmode
-                0x0000000140005530       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005530                .refptr._fmode
+                0x0000000140005510       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005510                .refptr._fmode
  .rdata$.refptr._gnu_exception_handler
-                0x0000000140005540       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005540                .refptr._gnu_exception_handler
+                0x0000000140005520       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005520                .refptr._gnu_exception_handler
  .rdata$.refptr._matherr
-                0x0000000140005550       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005550                .refptr._matherr
+                0x0000000140005530       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005530                .refptr._matherr
  .rdata$.refptr._newmode
-                0x0000000140005560       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005560                .refptr._newmode
- .rdata$zzz     0x0000000140005570       0x50 build/o/Static.o
- .rdata$zzz     0x00000001400055c0       0x50 build/o/test.o
-                0x0000000140005610                . = ALIGN (0x4)
-                0x0000000140005610                __rt_psrelocs_start = .
+                0x0000000140005540       0x10 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005540                .refptr._newmode
+ .rdata$zzz     0x0000000140005550       0x50 build/o/Static.o
+ .rdata$zzz     0x00000001400055a0       0x50 build/o/test.o
+                0x00000001400055f0                . = ALIGN (0x4)
+                0x00000001400055f0                __rt_psrelocs_start = .
  *(.rdata_runtime_pseudo_reloc)
  .rdata_runtime_pseudo_reloc
-                0x0000000140005610       0x18 my_program_exe_rtr000000.o
-                0x0000000140005628                __rt_psrelocs_end = .
-                0x0000000140005628                . = ALIGN (0x8)
-                0x0000000140005628                ___CTOR_LIST__ = .
-                0x0000000140005628                __CTOR_LIST__ = .
-                0x0000000140005628        0x4 LONG 0xffffffffffffffff
-                0x000000014000562c        0x4 LONG 0xffffffffffffffff
+                0x00000001400055f0       0x18 my_program_exe_rtr000000.o
+                0x0000000140005608                __rt_psrelocs_end = .
+                0x0000000140005608                . = ALIGN (0x8)
+                0x0000000140005608                ___CTOR_LIST__ = .
+                0x0000000140005608                __CTOR_LIST__ = .
+                0x0000000140005608        0x4 LONG 0xffffffffffffffff
+                0x000000014000560c        0x4 LONG 0xffffffffffffffff
  *(.ctors)
  *(.ctor)
  *(SORT_BY_NAME(.ctors.*))
- .ctors.65535   0x0000000140005630        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtend.o
-                0x0000000140005638        0x4 LONG 0x0
-                0x000000014000563c        0x4 LONG 0x0
-                0x0000000140005640                ___DTOR_LIST__ = .
-                0x0000000140005640                __DTOR_LIST__ = .
-                0x0000000140005640        0x4 LONG 0xffffffffffffffff
-                0x0000000140005644        0x4 LONG 0xffffffffffffffff
+ .ctors.65535   0x0000000140005610        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/crtend.o
+                0x0000000140005618        0x4 LONG 0x0
+                0x000000014000561c        0x4 LONG 0x0
+                0x0000000140005620                ___DTOR_LIST__ = .
+                0x0000000140005620                __DTOR_LIST__ = .
+                0x0000000140005620        0x4 LONG 0xffffffffffffffff
+                0x0000000140005624        0x4 LONG 0xffffffffffffffff
  *(.dtors)
  *(.dtor)
  *(SORT_BY_NAME(.dtors.*))
-                0x0000000140005648        0x4 LONG 0x0
-                0x000000014000564c        0x4 LONG 0x0
-                0x0000000140005650                ___crt_xc_start__ = .
+                0x0000000140005628        0x4 LONG 0x0
+                0x000000014000562c        0x4 LONG 0x0
+                0x0000000140005630                ___crt_xc_start__ = .
  *(SORT_BY_NAME(.CRT$XC*))
- .CRT$XCA       0x0000000140005650        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
-                0x0000000140005650                __xc_a
- .CRT$XCAA      0x0000000140005658        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005658                __mingw_pcppinit
- .CRT$XCZ       0x0000000140005660        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
-                0x0000000140005660                __xc_z
-                0x0000000140005668                ___crt_xc_end__ = .
-                0x0000000140005668                ___crt_xi_start__ = .
+ .CRT$XCA       0x0000000140005630        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
+                0x0000000140005630                __xc_a
+ .CRT$XCAA      0x0000000140005638        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005638                __mingw_pcppinit
+ .CRT$XCZ       0x0000000140005640        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
+                0x0000000140005640                __xc_z
+                0x0000000140005648                ___crt_xc_end__ = .
+                0x0000000140005648                ___crt_xi_start__ = .
  *(SORT_BY_NAME(.CRT$XI*))
- .CRT$XIA       0x0000000140005668        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
-                0x0000000140005668                __xi_a
- .CRT$XIAA      0x0000000140005670        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
-                0x0000000140005670                __mingw_pcinit
- .CRT$XIZ       0x0000000140005678        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
-                0x0000000140005678                __xi_z
-                0x0000000140005680                ___crt_xi_end__ = .
-                0x0000000140005680                ___crt_xl_start__ = .
+ .CRT$XIA       0x0000000140005648        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
+                0x0000000140005648                __xi_a
+ .CRT$XIAA      0x0000000140005650        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o
+                0x0000000140005650                __mingw_pcinit
+ .CRT$XIZ       0x0000000140005658        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-cinitexe.o)
+                0x0000000140005658                __xi_z
+                0x0000000140005660                ___crt_xi_end__ = .
+                0x0000000140005660                ___crt_xl_start__ = .
  *(SORT_BY_NAME(.CRT$XL*))
- .CRT$XLA       0x0000000140005680        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
-                0x0000000140005680                __xl_a
- .CRT$XLC       0x0000000140005688        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
-                0x0000000140005688                __xl_c
- .CRT$XLD       0x0000000140005690        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
-                0x0000000140005690                __xl_d
- .CRT$XLZ       0x0000000140005698        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
-                0x0000000140005698                __xl_z
-                0x00000001400056a0                ___crt_xp_start__ = .
+ .CRT$XLA       0x0000000140005660        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+                0x0000000140005660                __xl_a
+ .CRT$XLC       0x0000000140005668        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+                0x0000000140005668                __xl_c
+ .CRT$XLD       0x0000000140005670        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+                0x0000000140005670                __xl_d
+ .CRT$XLZ       0x0000000140005678        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+                0x0000000140005678                __xl_z
+                0x0000000140005680                ___crt_xp_start__ = .
  *(SORT_BY_NAME(.CRT$XP*))
-                0x00000001400056a0                ___crt_xp_end__ = .
-                0x00000001400056a0                ___crt_xt_start__ = .
+                0x0000000140005680                ___crt_xp_end__ = .
+                0x0000000140005680                ___crt_xt_start__ = .
  *(SORT_BY_NAME(.CRT$XT*))
-                0x00000001400056a0                ___crt_xt_end__ = .
-                0x00000001400056a0                ___crt_xd_start__ = .
+                0x0000000140005680                ___crt_xt_end__ = .
+                0x0000000140005680                ___crt_xd_start__ = .
  *(SORT_BY_NAME(.CRT$XD*))
- .CRT$XDA       0x00000001400056a0        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
- .CRT$XDZ       0x00000001400056a8        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
-                0x00000001400056b0                ___crt_xd_end__ = .
-                0x0000000140005628                ___RUNTIME_PSEUDO_RELOC_LIST_END__ = __rt_psrelocs_end
-                0x0000000140005628                __RUNTIME_PSEUDO_RELOC_LIST_END__ = __rt_psrelocs_end
-                0x0000000140005610                ___RUNTIME_PSEUDO_RELOC_LIST__ = __rt_psrelocs_start
-                0x0000000140005610                __RUNTIME_PSEUDO_RELOC_LIST__ = __rt_psrelocs_start
+ .CRT$XDA       0x0000000140005680        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+ .CRT$XDZ       0x0000000140005688        0x8 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/../../../../x86_64-w64-mingw32/lib/../lib/libmingw32.a(lib64_libmingw32_a-tlssup.o)
+                0x0000000140005690                ___crt_xd_end__ = .
+                0x0000000140005608                ___RUNTIME_PSEUDO_RELOC_LIST_END__ = __rt_psrelocs_end
+                0x0000000140005608                __RUNTIME_PSEUDO_RELOC_LIST_END__ = __rt_psrelocs_end
+                0x00000001400055f0                ___RUNTIME_PSEUDO_RELOC_LIST__ = __rt_psrelocs_start
+                0x00000001400055f0                __RUNTIME_PSEUDO_RELOC_LIST__ = __rt_psrelocs_start
 
 .eh_frame
  *(.eh_frame*)
@@ -1358,9 +1356,13 @@ sivision        0x0000000140004000      0x200
 .debug_aranges  0x000000014000c000      0x200
  *(.debug_aranges)
  .debug_aranges
-                0x000000014000c000       0x30 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+                0x000000014000c000       0x30 build/o/Static.o
  .debug_aranges
-                0x000000014000c030       0x20 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
+                0x000000014000c030       0x30 build/o/test.o
+ .debug_aranges
+                0x000000014000c060       0x30 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+ .debug_aranges
+                0x000000014000c090       0x20 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
 
 .zdebug_aranges
  *(.zdebug_aranges)
@@ -1371,41 +1373,51 @@ sivision        0x0000000140004000      0x200
 .zdebug_pubnames
  *(.zdebug_pubnames)
 
-.debug_info     0x000000014000d000     0x1200
+.debug_info     0x000000014000d000     0x4200
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x000000014000d000       0x28 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
- .debug_info    0x000000014000d028     0x117e C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
+ .debug_info    0x000000014000d000      0x106 build/o/Static.o
+ .debug_info    0x000000014000d106     0x2e7d build/o/test.o
+ .debug_info    0x000000014000ff83       0x28 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+ .debug_info    0x000000014000ffab     0x117e C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
 
 .zdebug_info
  *(.zdebug_info .zdebug.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x000000014000f000      0x200
+.debug_abbrev   0x0000000140012000      0x600
  *(.debug_abbrev)
- .debug_abbrev  0x000000014000f000       0x14 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
- .debug_abbrev  0x000000014000f014       0xa1 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
+ .debug_abbrev  0x0000000140012000       0x51 build/o/Static.o
+ .debug_abbrev  0x0000000140012051      0x4b5 build/o/test.o
+ .debug_abbrev  0x0000000140012506       0x14 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+ .debug_abbrev  0x000000014001251a       0xa1 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
 
 .zdebug_abbrev
  *(.zdebug_abbrev)
 
-.debug_line     0x0000000140010000      0x200
+.debug_line     0x0000000140013000     0x1200
  *(.debug_line)
- .debug_line    0x0000000140010000       0x5c C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
- .debug_line    0x000000014001005c       0x48 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
+ .debug_line    0x0000000140013000       0x59 build/o/Static.o
+ .debug_line    0x0000000140013059      0xf0c build/o/test.o
+ .debug_line    0x0000000140013f65       0x5c C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+ .debug_line    0x0000000140013fc1       0x48 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
 
 .zdebug_line
  *(.zdebug_line)
 
-.debug_frame    0x0000000140011000      0x200
+.debug_frame    0x0000000140015000      0x200
  *(.debug_frame*)
- .debug_frame   0x0000000140011000       0x48 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+ .debug_frame   0x0000000140015000       0x40 build/o/Static.o
+ .debug_frame   0x0000000140015040       0x40 build/o/test.o
+ .debug_frame   0x0000000140015080       0x48 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
 
 .zdebug_frame
  *(.zdebug_frame*)
 
-.debug_str      0x0000000140012000      0x200
+.debug_str      0x0000000140016000      0x200
  *(.debug_str)
- .debug_str     0x0000000140012000       0xa3 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
- .debug_str     0x00000001400120a3        0x0 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
+ .debug_str     0x0000000140016000        0x0 build/o/Static.o
+ .debug_str     0x0000000140016000       0x4f build/o/test.o
+ .debug_str     0x000000014001604f       0xa3 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+ .debug_str     0x00000001400160f2        0x0 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
 
 .zdebug_str
  *(.zdebug_str)
@@ -1471,12 +1483,12 @@ sivision        0x0000000140004000      0x200
  *(.zdebug_addr)
 
 .debug_line_str
-                0x0000000140013000      0x200
+                0x0000000140017000      0x200
  *(.debug_line_str)
  .debug_line_str
-                0x0000000140013000       0x97 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
+                0x0000000140017000       0x97 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_chkstk_ms.o)
  .debug_line_str
-                0x0000000140013097      0x161 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
+                0x0000000140017097      0x161 C:/Users/lenovo/Downloads/x86_64-15.1.0-release-win32-seh-ucrt-rt_v12-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.1.0/libgcc.a(_ctors.o)
 
 .zdebug_line_str
  *(.zdebug_line_str)
@@ -1487,8 +1499,10 @@ sivision        0x0000000140004000      0x200
 .zdebug_loclists
  *(.zdebug_loclists)
 
-.debug_macro
+.debug_macro    0x0000000140018000    0x37800
  *(.debug_macro)
+ .debug_macro   0x0000000140018000     0x3bea build/o/Static.o
+ .debug_macro   0x000000014001bbea    0x33a86 build/o/test.o
 
 .zdebug_macro
  *(.zdebug_macro)
