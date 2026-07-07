@@ -1,6 +1,7 @@
-TARGET = $(bindir)/my_program 
+TARGET = $(bindir)/my_program
 CC = g++
-CFLAGS = -Wall -Wextra -g3 -gdwarf-4
+OBJCOPY = objcopy
+CFLAGS = -Wall -Wextra -g3 -gdwarf-4 -I$(incdir)
 #-WALL Enables the most commonly useful compiler warnings.
 #-WEXTRA Enables some extra warning flags that are not enabled by -Wall.
 #-g3 Generates debug information for use by GDB.
