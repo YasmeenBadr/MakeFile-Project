@@ -1,7 +1,18 @@
 TARGET = $(bindir)/my_program
-CC = g++
 OBJCOPY = objcopy
+OBJDUMP = objdump
 BUILD_MODE ?= debug
+PROJECT_LANG ?= cpp
+
+ifeq ($(PROJECT_LANG),c)
+CC = gcc
+SRC_EXT = c
+else ifeq ($(PROJECT_LANG),cpp)
+CC = g++
+SRC_EXT = cpp
+else
+$(error PROJECT_LANG must be c or cpp)
+endif
 
 # Debug flags
 DEBUG_CFLAGS = -Wall -Wextra -g3 -gdwarf-4 -I$(incdir) -O0 -DDEBUG
@@ -24,7 +35,7 @@ endif
 srcdir = src
 incdir = inc
 builddir = build
-SRCS = $(wildcard $(srcdir)/*.cpp)
+SRCS = $(wildcard $(srcdir)/*.$(SRC_EXT))
 preprocessordir = $(builddir)/i
 assemblerdir = $(builddir)/s
 objdir = $(builddir)/o
